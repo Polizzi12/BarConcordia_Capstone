@@ -94,6 +94,33 @@ function Home() {
         </div>
       </div>
     </div>
+    <div className="container-fluid melo" >
+     <div className='card'>
+      <div className="row mm">
+        <div className="col-md-6">
+          <Card style={{ height: '100%'  }}>
+            <Card.Img variant="top" src={Interno}  className="card-img-top"/>
+          </Card>
+        </div>
+        <div className="col-md-6">
+          
+          <Card style={{ height: '100%' }}>
+            <Card.Body>
+              <Card.Title className='card-title'>
+                      Per Gli Amanti Del Salato!
+              </Card.Title>
+              <Card.Text>
+Scopri la nostra selezione di prelibatezze salate! Visita la sezione dedicata sul nostro sito e lasciati tentare dalle nostre specialità che completeranno perfettamente la tua esperienza al Bar Concordia. Non perdere l'opportunità di assaporare il meglio della gastronomia locale, sempre con la qualità e il gusto che ci contraddistingue. Ti aspettiamo per farti scoprire un'altra deliziosa parte della nostra offerta, nel cuore di Mazzarrone.
+              </Card.Text>
+              <Link to="/Prodotti">
+                <Button className="bottone">SAPORI SALATI</Button>
+              </Link>
+            </Card.Body>
+          </Card>
+        </div>
+        </div>
+      </div>
+    </div>
 </div>
   );
 }

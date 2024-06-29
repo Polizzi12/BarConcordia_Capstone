@@ -138,7 +138,7 @@
   border: none !important;
   height: 100% !important;
   object-fit: cover !important;
-  border-radius: 20px !important; /* Arrotonda gli angoli dell'immagine */
+  /* border-radius: 20px !important; Arrotonda gli angoli dell'immagine */
   overflow: hidden !important; /* Nasconde il contenuto che supera i bordi arrotondati */
 }
 
@@ -226,3 +226,57 @@
   
 }
 
+.footer {
+  color: white;
+  padding-top: 200px;
+  padding-inline: 200px;
+  background-color: #A18F78;
+}
+
+.footer li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer li a:hover {
+  cursor: pointer;
+  color: #27f7ea;
+  text-decoration: underline;
+}
+
+.cont {
+  width: 100%;
+  border-top: 0.5px solid #969696;
+  padding-block: 55px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.icon {
+  position: relative;
+  right: 100px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  height: 30px;
+  width: 70px;
+}
+
+.icon-item {
+  background-color: white;
+  border-radius: 50%;
+  padding-inline: 7px;
+  cursor: pointer;
+}
+
+.punto a {
+  text-decoration: none;
+  color: #000;
+}
+
+.iff:hover {
+  color:#27f7ea;
+ text-decoration: underline;
+  cursor: pointer;
+}

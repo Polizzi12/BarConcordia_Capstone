@@ -6,7 +6,7 @@ import Prenota from './components/Prenota';
 import Prodotti from './components/Prodotti';
 import Banner from './components/Banner';
 import  { useState, useEffect } from 'react';
-
+import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
@@ -22,6 +22,7 @@ function App() {
           <Route path="/prodotti" element={<Prodotti/>} />
           <Route path="/prenota" element={<Prenota />} />
     </Routes>
+      <Footer/>
     </div>
     </Router>
   );
