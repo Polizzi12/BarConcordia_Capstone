@@ -11,9 +11,12 @@ import Image from 'react-bootstrap/Image';
 import Immagineuno from '../assets/torta1.jpg';
 import Immaginedue from '../assets/torta2.jpg';
 import Immaginetre from '../assets/tortakinder.jpg';
-
+import { useEffect } from 'react';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 function Home() {
+ 
   return (
 <div>
     <div className="container-fluid melo" >
@@ -43,7 +46,7 @@ function Home() {
         </div>
       </div>
     </div>
-    <div className='gio'>
+    <div className='gio' >
       <Carousel>
         <Carousel.Item interval={1000}>
           <Image src={Immagineuno} alt="First slide" flui/>
@@ -94,7 +97,7 @@ function Home() {
         </div>
       </div>
     </div>
-    <div className="container-fluid melo" >
+    <div className="container-fluid melo"  >
      <div className='card'>
       <div className="row mm">
         <div className="col-md-6">
