@@ -1,170 +1,63 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
-import Dropdown from 'react-bootstrap/Dropdown';
+import React, { useState } from 'react';
+
 
 const Prodotti = () => {
+  const [activeTab, setActiveTab] = useState('pasticceria');
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
+
   return (
-    <div className='padre'>
-      <Dropdown className="drop">
-                  <Dropdown.Toggle  id="dropdown-basic">
-                    Pasticceria
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                  <Dropdown>
-                  <Dropdown.Toggle  id="dropdown-basic">
-                    Dropdown Button
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-2">Another action </Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-                <Dropdown>
-                  <Dropdown.Toggle  id="dropdown-basic">
-                    Dropdown Button
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-2">Another action </Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-                <Dropdown>
-                  <Dropdown.Toggle  id="dropdown-basic">
-                    Dropdown Button
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-2">Another action </Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-                <Dropdown>
-                  <Dropdown.Toggle  id="dropdown-basic">
-                    Dropdown Button
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-2">Another action </Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-                  </Dropdown.Menu>
-    </Dropdown> 
-    <Dropdown className="drop">
-                  <Dropdown.Toggle  id="dropdown-basic">
-                   Tavola Calda
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                  <Dropdown>
-                  <Dropdown.Toggle  id="dropdown-basic">
-                    Dropdown Button
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-2">Another action </Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-                <Dropdown>
-                  <Dropdown.Toggle  id="dropdown-basic">
-                    Dropdown Button
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-2">Another action </Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-                <Dropdown>
-                  <Dropdown.Toggle  id="dropdown-basic">
-                    Dropdown Button
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-2">Another action </Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-                <Dropdown>
-                  <Dropdown.Toggle  id="dropdown-basic">
-                    Dropdown Button
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-2">Another action </Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-                  </Dropdown.Menu>
-    </Dropdown>
-    <Dropdown className="drop">
-                  <Dropdown.Toggle  id="dropdown-basic">
-                    Caffetteria
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                  <Dropdown>
-                  <Dropdown.Toggle  id="dropdown-basic">
-                    Dropdown Button
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-2">Another action </Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-                <Dropdown>
-                  <Dropdown.Toggle  id="dropdown-basic">
-                    Dropdown Button
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-2">Another action </Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-                <Dropdown>
-                  <Dropdown.Toggle  id="dropdown-basic">
-                    Dropdown Button
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-2">Another action </Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-                <Dropdown>
-                  <Dropdown.Toggle  id="dropdown-basic">
-                    Dropdown Button
-                  </Dropdown.Toggle>
-
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-2">Another action </Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown>
-                  </Dropdown.Menu>
-    </Dropdown>
-    
-
+    <div className="padre">
+      <div className="tabs">
+        <button
+          className={`tab-button ${activeTab === 'pasticceria' ? 'active' : ''}`}
+          onClick={() => handleTabClick('pasticceria')}
+        >
+          Pasticceria
+        </button>
+        <button
+          className={`tab-button ${activeTab === 'tavola-calda' ? 'active' : ''}`}
+          onClick={() => handleTabClick('tavola-calda')}
+        >
+          Tavola Calda
+        </button>
+        <button
+          className={`tab-button ${activeTab === 'caffetteria' ? 'active' : ''}`}
+          onClick={() => handleTabClick('caffetteria')}
+        >
+          Caffetteria
+        </button>
+      </div>
+      <div className="tab-content">
+        <div className={`tab-pane ${activeTab === 'pasticceria' ? 'active' : ''}`}>
+          <h2>Pasticceria</h2>
+          <ul>
+            <li>Prodotto 1</li>
+            <li>Prodotto 2</li>
+            <li>Prodotto 3</li>
+          </ul>
+        </div>
+        <div className={`tab-pane ${activeTab === 'tavola-calda' ? 'active' : ''}`}>
+          <h2>Tavola Calda</h2>
+          <ul>
+            <li>Prodotto 1</li>
+            <li>Prodotto 2</li>
+            <li>Prodotto 3</li>
+          </ul>
+        </div>
+        <div className={`tab-pane ${activeTab === 'caffetteria' ? 'active' : ''}`}>
+          <h2>Caffetteria</h2>
+          <ul>
+            <li>Prodotto 1</li>
+            <li>Prodotto 2</li>
+            <li>Prodotto 3</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default Prodotti;
