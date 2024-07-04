@@ -389,7 +389,6 @@ border-radius: 20px !important;
   flex-direction: column;
   align-items: center;
 }
-
 .tabs {
   display: flex;
   justify-content: center;
@@ -416,18 +415,19 @@ border-radius: 20px !important;
   background-color: #a18f78;
   border-color: #816a4d;
   color:#20c1b6;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .tab-button:hover{
   background-color: #a18f78;
   border-color: #d3bda0;
   color: #27f7ea;
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: 0.3s ease-in;
 }
 .tab-content {
   width: 100%;
   padding: 20px;
+  background-image: url(./assets/murologo.jpg);
 }
 
 .tab-content > div {
@@ -457,10 +457,26 @@ border-radius: 20px !important;
     gap:110px;
   }
 }
+
+
 .titolo{
   text-align: center;
   color: #A18F78;
   padding-block: 45px;
+}
+@media (max-width:850px){
+  .titolo{
+    padding-block:15px;
+  }
+  .tabs{
+    padding-top:10px;
+  }
+  .tab-content{
+    padding-top: 0px;
+    padding-inline:20px;
+    padding-bottom: 20px;
+    
+  }
 }
 
 .list{
