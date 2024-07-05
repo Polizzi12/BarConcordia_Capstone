@@ -1,5 +1,7 @@
+
 import React, { useState } from 'react';
-import Pasticcini1 from '../assets/pasticcini1.jpg'
+import Pasticcini1 from '../assets/pasticcini1.jpg';
+import Pizze from '../assets/pizze.jpg';
 
 const Prodotti = () => {
   const [activeTab, setActiveTab] = useState('pasticceria');
@@ -16,127 +18,28 @@ const Prodotti = () => {
           className={`tab-button pasticceria-button ${activeTab === 'pasticceria' ? 'active' : ''}`}
           onClick={() => handleTabClick('pasticceria')}
         >
-          Pasticceria
+          <div className='tt'>Pasticceria
+          </div>  
+          
         </button>
        
         <button
           className={`tab-button tavolacalda-button ${activeTab === 'tavola-calda' ? 'active' : ''}`}
           onClick={() => handleTabClick('tavola-calda')}
         >
-          Tavola Calda
+          <div className='tt'>Tavola Calda
+          </div>  
         </button>
       
         <button
           className={`tab-button caffetteria-button ${activeTab === 'caffetteria' ? 'active' : ''}`}
           onClick={() => handleTabClick('caffetteria')}
         >
-          Caffetteria
+          <div className='tt'>Caffetteria
+          </div>  
         </button>
       
         <div className="tab-content">
-        <div className={`tab-pane ${activeTab === 'caffetteria' ? 'active' : ''}`}>
-        <div className='list'>
-          <h2 className='ttl' >Tavola Calda</h2>
-          <ul>
-            <li>
-              <div className="bloc">
-                  <div className="image-container">
-                    <img src={Pasticcini1} className="immagini" alt="Pasticcini"/>
-                </div>
-                <div className="description">
-                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
-                </div>
-             </div>
-            </li>
-            <li><div className="bloc">
-                  <div className="image-container">
-                    <img src={Pasticcini1} className="immagini" alt="Pasticcini"/>
-                </div>
-                <div className="description">
-                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
-                </div>
-             </div>
-             </li>
-            <li>
-              <div className="bloc">
-                  <div className="image-container">
-                    <img src={Pasticcini1} className="immagini" alt="Pasticcini"/>
-                </div>
-                <div className="description">
-                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
-                </div>
-             </div>
-             </li>
-            
-          </ul>
-          </div>
-        </div>
-        <div className={`tab-pane ${activeTab === 'tavola-calda' ? 'active' : ''}`}>
-        <div className='list'>
-          <h2 className='ttl'>Tavola Calda</h2>
-          <ul>
-            <li>
-              <div className="bloc">
-                  <div className="image-container">
-                    <img src={Pasticcini1} className="immagini" alt="Pasticcini"/>
-                </div>
-                <div className="description">
-                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
-                </div>
-             </div>
-            </li>
-            <li><div className="bloc">
-                  <div className="image-container">
-                    <img src={Pasticcini1} className="immagini" alt="Pasticcini"/>
-                </div>
-                <div className="description">
-                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
-                </div>
-             </div>
-             </li>
-            <li>
-              <div className="bloc">
-                  <div className="image-container">
-                    <img src={Pasticcini1} className="immagini" alt="Pasticcini"/>
-                </div>
-                <div className="description">
-                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
-                </div>
-             </div>
-             </li>
-            <li>
-            <div className="bloc">
-                  <div className="image-container">
-                    <img src={Pasticcini1} className="immagini" alt="Pasticcini"/>
-                </div>
-                <div className="description">
-                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
-                </div>
-             </div>
-            </li>
-            <li>
-            <div className="bloc">
-                  <div className="image-container">
-                    <img src={Pasticcini1} className="immagini" alt="Pasticcini"/>
-                </div>
-                <div className="description">
-                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
-                </div>
-             </div>
-            </li>
-            <li>
-            <div className="bloc">
-                  <div className="image-container">
-                    <img src={Pasticcini1} className="immagini" alt="Pasticcini"/>
-                </div>
-                <div className="description">
-                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
-                </div>
-             </div>
-            </li>
-          </ul>
-          </div>
-        </div>
         <div className={`tab-pane ${activeTab === 'pasticceria' ? 'active' : ''}`}>
          <div className='list'>
           <h2 className='ttl'>Pasticcini</h2>
@@ -326,7 +229,111 @@ const Prodotti = () => {
             </li>
           </ul>
           </div>
+      </div>
+        <div className={`tab-pane ${activeTab === 'caffetteria' ? 'active' : ''}`}>
+        <div className='list'>
+          <h2 className='ttl' >Tavola Calda</h2>
+          <ul>
+            <li>
+              <div className="bloc">
+                  <div className="image-container">
+                    <img src={Pasticcini1} className="immagini" alt="Pizze"/>
+                </div>
+                <div className="description">
+                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
+                </div>
+             </div>
+            </li>
+            <li><div className="bloc">
+                  <div className="image-container">
+                    <img src={Pasticcini1} className="immagini" alt="Pasticcini"/>
+                </div>
+                <div className="description">
+                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
+                </div>
+             </div>
+             </li>
+            <li>
+              <div className="bloc">
+                  <div className="image-container">
+                    <img src={Pasticcini1} className="immagini" alt="Pasticcini"/>
+                </div>
+                <div className="description">
+                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
+                </div>
+             </div>
+             </li>
+            
+          </ul>
+          </div>
         </div>
+        <div className={`tab-pane ${activeTab === 'tavola-calda' ? 'active' : ''}`}>
+        <div className='list'>
+          <h2 className='ttl'>Tavola Calda</h2>
+          <ul>
+            <li>
+              <div className="bloc">
+                  <div className="image-container">
+                    <img src={Pizze} className="immagini" alt="Pasticcini"/>
+                </div>
+                <div className="description">
+                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
+                </div>
+             </div>
+            </li>
+            <li><div className="bloc">
+                  <div className="image-container">
+                    <img src={Pasticcini1} className="immagini" alt="Pasticcini"/>
+                </div>
+                <div className="description">
+                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
+                </div>
+             </div>
+             </li>
+            <li>
+              <div className="bloc">
+                  <div className="image-container">
+                    <img src={Pasticcini1} className="immagini" alt="Pasticcini"/>
+                </div>
+                <div className="description">
+                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
+                </div>
+             </div>
+             </li>
+            <li>
+            <div className="bloc">
+                  <div className="image-container">
+                    <img src={Pasticcini1} className="immagini" alt="Pasticcini"/>
+                </div>
+                <div className="description">
+                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
+                </div>
+             </div>
+            </li>
+            <li>
+            <div className="bloc">
+                  <div className="image-container">
+                    <img src={Pasticcini1} className="immagini" alt="Pasticcini"/>
+                </div>
+                <div className="description">
+                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
+                </div>
+             </div>
+            </li>
+            <li>
+            <div className="bloc">
+                  <div className="image-container">
+                    <img src={Pasticcini1} className="immagini" alt="Pasticcini"/>
+                </div>
+                <div className="description">
+                  Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure il pistacchio.
+                </div>
+             </div>
+            </li>
+          </ul>
+          </div>
+        </div>
+    
         </div>
       </div>
       

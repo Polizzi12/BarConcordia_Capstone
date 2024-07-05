@@ -308,7 +308,7 @@ border-radius: 20px !important;
 }
 
 
-.drop {
+/* .drop {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -321,23 +321,23 @@ border-radius: 20px !important;
  
   background-color: transparent !important;
   border: none !important;
-  padding: 0 !important; /* Rimuove il padding */
-  margin: 0 !important; /* Rimuove il margine */
+  padding: 0 !important; 
+  margin: 0 !important;
 }
 
 .dropdown-item {
   background-color: transparent !important;
-  padding: 5px 10px !important; /* Ridotto il padding degli item */
+  padding: 5px 10px !important; 
 }
 
-/* Rimuove il margine e padding extra tra i dropdown annidati */
+Rimuove il margine e padding extra tra i dropdown annidati 
 .dropdown-menu .drop {
   margin: 0 !important;
   padding: 0 !important;
 }
 
 .dropdown-menu .dropdown-item {
-  padding: 5px 10px !important; /* Mantenuto il padding per gli item */
+  padding: 5px 10px !important; Mantenuto il padding per gli item 
   margin: 0 !important; 
 }
 
@@ -361,10 +361,10 @@ border-radius: 20px !important;
   color: #fff !important;
   background-color: #A18F78 !important;
   border-color: #d3bda0 !important;
-}
+} */
 
 
-@media (max-width: 850px) {
+/* @media (max-width: 850px) {
   .dropdown-custom-toggle,
   .dropdown-custom-menu,
   .dropdown-custom-item {
@@ -378,10 +378,10 @@ border-radius: 20px !important;
   .drop {
     margin-bottom: 10px !important;  
   }
-}
+} */
 
 .padre {
-  background-color: #27f7ea;
+  background-color: #d3bda0;
   color: white;
   width: 100%;
   min-height: 100vh;
@@ -394,15 +394,13 @@ border-radius: 20px !important;
   justify-content: center;
   flex-wrap: wrap;
   gap:30px;
-  margin-bottom: 20px;
-  padding-top:50px;
-  padding-inline: 10px;
+  /* padding-inline: 10px; */
 }
 
 .tab-button {
-  border: 6.5px solid #a18f78;
+  border: 6.5px solid #816a4d;
   border-radius: 20px;
-  color: white;
+  color: aliceblue;
   padding: 10px 20px;
   font-size: 24px;
   cursor: pointer;
@@ -412,14 +410,12 @@ border-radius: 20px !important;
 }
 
 .tab-button.active {
-  background-color: #a18f78;
-  border-color: #816a4d;
-  color:#20c1b6;
+  border-color: #27f7ea;
+  color:#27f7ea;
   transform: scale(1.1);
 }
 .tab-button:hover{
-  background-color: #a18f78;
-  border-color: #d3bda0;
+  border-color: #27f7ea;
   color: #27f7ea;
   transform: scale(1.1);
   transition: 0.3s ease-in;
@@ -427,7 +423,8 @@ border-radius: 20px !important;
 .tab-content {
   width: 100%;
   padding: 20px;
-  background-image: url(./assets/murologo.jpg);
+  background-image: url(./assets/sfondomenu.jpeg);
+  
 }
 
 .tab-content > div {
@@ -451,7 +448,7 @@ border-radius: 20px !important;
     width:450px;
     height:300px;
     font-size: 40px;
-    border: 15px solid #a18f78
+    border: 15px solid #816a4d
   }
   .tabs{
     gap:110px;
@@ -461,7 +458,7 @@ border-radius: 20px !important;
 
 .titolo{
   text-align: center;
-  color: #A18F78;
+  color: #816a4d;
   padding-block: 45px;
 }
 @media (max-width:850px){
@@ -475,8 +472,9 @@ border-radius: 20px !important;
     padding-top: 0px;
     padding-inline:20px;
     padding-bottom: 20px;
-    
+    padding-top:10px;
   }
+ 
 }
 
 .list{
@@ -492,11 +490,23 @@ border-radius: 20px !important;
   padding: 0;
   margin: 0;
 }
-.immagini {
-  width: 100%; /* Ensure the image fills the container */
+/* .immagini {
+  width: 100%;  
   height: auto;
   border-radius: 20px;
+} */
+
+.immagini {
+  width: 100%; /* Fai sì che l'immagine occupi tutta la larghezza disponibile */
+  height: 100%; /* Fai sì che l'immagine occupi tutta l'altezza disponibile */
+  object-fit: cover;
+  position: absolute; /* Posiziona l'immagine in modo assoluto all'interno del contenitore */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
+
 .bloc {
   display: flex;
   align-items: center;
@@ -508,31 +518,96 @@ border-radius: 20px !important;
   overflow: hidden; /* Ensures border-radius is applied to children */
   margin: 0 auto; /* Center the block */
   background-color: #a18f78;
-  
 }
 
 .image-container {
-  flex: 1; /* Allow the image container to take up one portion of the space */
-  max-width: 200px; /* Limit the maximum width of the image container */
+  flex: 1; /* Modifica il flex-grow a 1 */
+  max-width: 33%; /* Massima larghezza dell'immagine a circa un terzo del blocco */
+  height: 100%; /* Assicura che l'immagine occupi tutta l'altezza del blocco */
+  display: flex; /* Applica flexbox al contenitore dell'immagine */
+  justify-content: center; /* Centra l'immagine orizzontalmente */
+  align-items: center; /* Centra l'immagine verticalmente */
+  overflow: hidden; /* Assicura che l'immagine non esca dal suo contenitore */
+  position: relative; 
 }
 
 .description {
   flex: 2; /* Allow the description to take up two portions of the space */
   padding: 20px; /* Add padding around the text for better readability */
   text-align: left;
+  font-size: 16px;
   
 }
-
   .pasticceria-button {
     background-image: url('./assets/pasticcini1.jpg'); 
-    background-size: contain; 
-    background-position: center;
+    background-size: cover;
+      background-position: center;
     background-repeat: no-repeat; 
   }
-
+.tavolacalda-button{
+    background-image: url('./assets/pizze.jpg');  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+  
+}
   .ttl{
-    color:#A18F78;
+    color:#d3bda0;
     font-size:50px;
+    background-color: aliceblue;
+    border: 3px solid #d3bda0;
+    border-radius: 20px;
+   
   }
 
+  @media (min-width:850px) {
+    .ttl{
+      width: 800px;
+      margin: 0 auto;
+    }
+  }
  
+  @media (max-width: 600px) {
+    .bloc {
+      flex-direction: column; /* Cambia l'orientamento a verticale */
+      height: auto; /* Imposta l'altezza automatica per adattarsi al contenuto */
+    }
+  
+    .image-container {
+      max-width: 100%; /* Larghezza massima per riempire il blocco */
+      height: auto; /* Altezza automatica per adattarsi all'immagine */
+      order: -1; /* Cambia l'ordine visuale, posiziona l'immagine sopra la descrizione */
+    }
+  
+    .description {
+      flex: 1; /* Occupa lo spazio rimanente */
+      padding: 20px;
+      text-align: left;
+      font-size: 14px; /* Riduci la dimensione del testo per dispositivi più piccoli */
+    }
+  
+    .immagini {
+      width: 100%; /* Assicura che l'immagine occupi tutta la larghezza disponibile */
+      height: 100%; /* Assicura che l'immagine occupi tutta l'altezza disponibile */
+      object-fit: cover;
+      position: static; /* Ripristina la posizione statica per l'immagine */
+    }
+  }
+
+  .tt {
+    background-color: #816a4d;
+    border-radius: 20px;
+    margin-inline: 20px;
+  }
+  
+  @media (max-width: 1440px) {
+    .tt {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .tt {
+      font-size: 16px;
+    }
+  }
