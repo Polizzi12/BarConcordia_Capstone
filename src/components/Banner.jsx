@@ -3,9 +3,9 @@ import bannerImage from '../assets/bar.jpg';
 
 const Banner = () => {
     return (
-      <div>
-        <img src={bannerImage} alt="Bar Concordia" style={{ width: '100%', height: 'auto' }} />
-      </div>
+      <div className="banner-container">
+            <img src={bannerImage} alt="Bar Concordia" className="banner-image" />
+        </div>
     );
   }
 

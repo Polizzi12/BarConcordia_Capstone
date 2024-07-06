@@ -12,6 +12,9 @@
   background-color:#A18F78;
 }
 
+
+
+
 .custom-navbar .logo-container {
   height: 80px;
   width: 80px;
@@ -86,6 +89,38 @@
   border-color:white ; /* Cambia il colore del bordo */
 }
 
+.banner-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden; /* Nasconde le parti dell'immagine che eccedono il contenitore */
+  position: relative;
+}
+
+.banner-image {
+  width: 100%;
+  height: 888px; /* Regola questa altezza secondo le tue esigenze */
+  object-fit: cover; 
+  object-position: center center; /* Centra l'immagine all'interno del contenitore */
+}
+
+@media (max-width: 1200px) {
+  .banner-image {
+    height: 600px; /* Altezza per schermi medi */
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-image {
+    height: 400px; /* Altezza per tablet */
+  }
+}
+
+@media (max-width: 576px) {
+  .banner-image {
+    height: 300px; /* Altezza per smartphone */
+  }
+}
+
 @media (max-width: 767px) {
   .custom-navbar .navbar-nav {
     text-align: center; /* Centra i link nel menu hamburger */
@@ -98,85 +133,7 @@
     z-index: 1000;
   }
 }
-/* .melo{
-  background-color: #d3bda0;
-  padding: 50px !important;
- 
- 
-}
-.bottone{
-  background-color: #27f7ea !important;
-  border-color: #27f7ea !important;
-}
 
-.bottone:hover{
-  background-color:#20c1b6 !important;
-  border-color: #20c1b6 !important;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.col-md-6 {
-  padding: 0 !important;
-
-}
-.mm {
-  border: none !important;
-  display: flex;
-  align-items: stretch;
-}
-
-.card {
-  border: none !important;
-  margin: 0;
-  -webkit-box-shadow:0px 0px 29px 6px #20c1b6;
--moz-box-shadow: 0px 0px 29px 6px #20c1b6;
-box-shadow: 0px 0px 29px 6px #20c1b6;
-border-radius: 20px !important;
-}
-.card-title{
-  font-size: 23px !important;
-  color: #27f7ea !important;
-}
-.card-img-top {
-  border: none !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  /* border-radius: 20px !important; 
-  overflow: hidden !important; 
-  border-radius:21% 79% 19% 81% / 66% 35% 65% 34% ;
-}
-
-.card-body {
-  border: none !important;
-  background-color: #d3bda0;
-  color: white !important;
-  margin: 0;  
- padding: 0; 
-}
-
-
-@media (min-width: 1400px) {
-   .melo{
-    padding-block: 200px !important;
-  }
-  
-  .card-title {
-    font-size: 50px !important;
-  }
-  .card-body{
-    font-size: 25px;
-  }
-  .bottone{
-    width: 300px;
-    height: 50px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .did{
-    padding-top: 130px !important;
-  }
-} */
 
 .melo, .gio, .did {
   background-color: #d3bda0;
@@ -265,7 +222,8 @@ box-shadow: 0px 0px 68px 0px #27f7ea;
 }
   .gio{
     background-color: #d3bda0;
-    padding: 20px !important;
+    padding-inline: 20px;
+    padding-block: 50px;
   }
  
 
@@ -273,11 +231,7 @@ box-shadow: 0px 0px 68px 0px #27f7ea;
   padding: 0 30px; /* Spazio ai lati del carosello su schermi più grandi */
 }
 
-.carousel-item img {
-  object-fit: contain; /* Allarga l'immagine per coprire completamente il contenitore */
-  height: 100%; /* Altezza desiderata per le slide */ 
-  width: 100%; 
-}
+
 
  .carousel{
   padding-inline:30px;
@@ -293,6 +247,7 @@ box-shadow: 0px 0px 68px 0px #27f7ea;
   object-fit: contain; 
   height: 100%; /* Altezza dell'immagine */
   width: 100%; /* Larghezza dell'immagine */
+  border-radius: 20px !important;
 }
 
 .carousel-caption {
@@ -302,11 +257,13 @@ box-shadow: 0px 0px 68px 0px #27f7ea;
   bottom: 0; /* Posizionamento in basso */
   left: 50% !important; /* Posizionamento centrale orizzontale */
   transform: translateX(-50%) !important; 
-  width: 80% !important; /* Larghezza massima */
-  max-width: 80% !important;
-  padding: 20px !important; /* Padding per il caption */
+  width: 100%;
+  margin-top: 120px !important; /* Padding per il caption */
   color: white; /* Colore del testo */
-  
+  border-radius: 20px;
+  box-shadow: inset 11px 11px 25px #20c1b6,
+            inset -11px -11px 25px #27f7ea;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 
@@ -376,77 +333,7 @@ box-shadow: 0px 0px 68px 0px #27f7ea;
 }
 
 
-/* .drop {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  padding-block: 30px !important;
-  margin-bottom: 20px !important;
-}
 
-.dropdown-menu {
- 
-  background-color: transparent !important;
-  border: none !important;
-  padding: 0 !important; 
-  margin: 0 !important;
-}
-
-.dropdown-item {
-  background-color: transparent !important;
-  padding: 5px 10px !important; 
-}
-
-Rimuove il margine e padding extra tra i dropdown annidati 
-.dropdown-menu .drop {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.dropdown-menu .dropdown-item {
-  padding: 5px 10px !important; Mantenuto il padding per gli item 
-  margin: 0 !important; 
-}
-
-.dropdown-custom-toggle,
-.dropdown-custom-menu,
-.dropdown-custom-item {
-  background-color: #d3bda0 !important;
-  border: 6.5px solid #A18F78 !important;
-  color: white !important;
-  width: 800px !important;
-  height: 300px !important;
-  font-size: 60px !important;
-}
-
-.dropdown-custom-toggle:hover,
-.dropdown-custom-toggle:focus,
-.dropdown-custom-toggle:active,
-.dropdown-custom-item:hover,
-.dropdown-custom-item:focus,
-.dropdown-custom-item:active {
-  color: #fff !important;
-  background-color: #A18F78 !important;
-  border-color: #d3bda0 !important;
-} */
-
-
-/* @media (max-width: 850px) {
-  .dropdown-custom-toggle,
-  .dropdown-custom-menu,
-  .dropdown-custom-item {
-    background-color: #d3bda0 !important;
-    border: 3px solid #A18F78 !important;
-    color: white !important;
-    width: 350px !important;
-    height: 110px !important;
-    font-size: 35px !important;
-  }
-  .drop {
-    margin-bottom: 10px !important;  
-  }
-} */
 
 .padre {
   background-color: #d3bda0;
@@ -530,6 +417,9 @@ Rimuove il margine e padding extra tra i dropdown annidati
   padding-block: 45px;
 }
 @media (max-width:850px){
+  .gio{
+    padding-top: 0px;
+  }
   .titolo{
     padding-block:15px;
   }
@@ -633,6 +523,9 @@ Rimuove il margine e padding extra tra i dropdown annidati
       width: 800px;
       margin: 0 auto;
     }
+    .gio{
+      padding-block: 100px;
+    }
   }
  
   @media (max-width: 600px) {
@@ -679,3 +572,9 @@ Rimuove il margine e padding extra tra i dropdown annidati
       font-size: 16px;
     }
   }
+
+@media (min-width:500px){
+  .carousel-caption{
+    width: fixed;
+  }
+}

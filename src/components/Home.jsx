@@ -11,6 +11,10 @@ import Image from 'react-bootstrap/Image';
 import Immagineuno from '../assets/torta1.jpg';
 import Immaginedue from '../assets/torta2.jpg';
 import Immaginetre from '../assets/tortakinder.jpg';
+import Immaginecinque from '../assets/conischizzati.jpg'
+import Immaginequattro from '../assets/conipistacchio.jpg'
+import Immaginesei from '../assets/conicolorati.jpg'
+import Immaginesette from '../assets/conicioccolato.jpg'
 import { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
@@ -42,7 +46,7 @@ function Home() {
       <div className='gio' >
       <Carousel>
         <Carousel.Item interval={1000}>
-          <Image src={Immagineuno} alt="First slide" flui/>
+        <img src={Immagineuno} alt="First slide" className="d-block w-100" />
           <Carousel.Caption>
             <h3>Torta 30 anni </h3>
             <p>3 piani di torta completamente decorata.</p>
@@ -86,24 +90,31 @@ function Home() {
       <div className='gio' >
       <Carousel>
         <Carousel.Item interval={1000}>
-          <Image src={Immagineuno} alt="First slide" flui/>
+          <Image src={Immaginequattro} alt="First slide" flui/>
           <Carousel.Caption>
-            <h3>Torta 30 anni </h3>
-            <p>3 piani di torta completamente decorata.</p>
+            <h3>Coni Turchi Al Pistacchio </h3>
+            <p>Il miglior gusto per i nostri speciali coni turchi.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={500}>
-          <Image src={Immaginedue} alt="Second slide" flui/>
+          <Image src={Immaginecinque} alt="Second slide" flui/>
           <Carousel.Caption>
-            <h3>Torta 18 anni</h3>
-            <p>Ben 4 piani di torta decorati con stile elegante.</p>
+          <h3>Coni Turchi Alle Nocciole</h3>
+          <p>Croccanti nocciole per un gusto unico e inconfondibile.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <Image src={Immaginetre} alt="Third slide" fluid/>
+          <Image src={Immaginesei} alt="Third slide" fluid/>
           <Carousel.Caption>
-            <h3>Torta Kinder</h3>
-            <p>Torta piena di pezzi Kinder, per i più golosi.</p>
+          <h3>Coni Turchi Alla Frutta</h3>
+          <p>Un'esplosione di freschezza con i sapori più fruttati.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image src={Immaginesette} alt="Third slide" fluid/>
+          <Carousel.Caption>
+          <h3>Coni Turchi Al Cioccolato</h3>
+          <p>Una delizia irresistibile per gli amanti del cioccolato.</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
