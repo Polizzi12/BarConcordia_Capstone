@@ -23,9 +23,9 @@ function Home() {
  
   return (
 <div>
-    <div>
+    <div className='cont'>
            {/* Sezione 1 */}
-           <div className="container-fluid melo">
+           <div className="container-fluid melo" data-aos="fade-up">
         <div className="row mm">
           <div className="col-md-6">
             <img src={Interno} alt="Interno del bar Concordia" className="section-image-one" />
@@ -43,7 +43,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className='gio' >
+      <div className='gio' data-aos="fade-up">
       <Carousel>
         <Carousel.Item interval={1000}>
         <img src={Immagineuno} alt="First slide" className="d-block w-100" />
@@ -69,7 +69,7 @@ function Home() {
       </Carousel>
     </div>
       {/* Sezione 2 con immagini */}
-      <div className="container-fluid gio">
+      <div className="container-fluid gio" data-aos="fade-up">
         <div className="row mm">
           <div className="col-md-6">
             <div className="section-content">
@@ -87,7 +87,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className='gio' >
+      <div className='gio' data-aos="fade-up" >
       <Carousel>
         <Carousel.Item interval={1000}>
           <Image src={Immaginequattro} alt="First slide" flui/>
@@ -118,9 +118,9 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-    </div>
+     </div>
       {/* Sezione 3 */}
-      <div className="container-fluid did">
+      <div className="container-fluid did" data-aos="fade-up">
         <div className="row mm">
           <div className="col-md-6">
             <img src={Interno} alt="Interno del bar Concordia" className="section-image-three" />
