@@ -25,7 +25,7 @@ function Home() {
 <div>
     <div className='cont'>
            {/* Sezione 1 */}
-           <div className="container-fluid melo" data-aos="fade-up">
+           <div className="container-fluid melo" data-aos="fade-right">
         <div className="row mm">
           <div className="col-md-6">
             <img src={Interno} alt="Interno del bar Concordia" className="section-image-one" />
@@ -69,7 +69,7 @@ function Home() {
       </Carousel>
     </div>
       {/* Sezione 2 con immagini */}
-      <div className="container-fluid gio" data-aos="fade-up">
+      <div className="container-fluid gio" data-aos="fade-left">
         <div className="row mm">
           <div className="col-md-6">
             <div className="section-content">
@@ -120,7 +120,7 @@ function Home() {
       </Carousel>
      </div>
       {/* Sezione 3 */}
-      <div className="container-fluid did" data-aos="fade-up">
+      <div className="container-fluid did" data-aos="fade-right">
         <div className="row mm">
           <div className="col-md-6">
             <img src={Interno} alt="Interno del bar Concordia" className="section-image-three" />
