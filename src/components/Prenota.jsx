@@ -28,7 +28,7 @@ const Prenota = () => {
           
           <div className="form-row">
             <label htmlFor="richieste">Richieste: </label>
-            {/* <textarea id="richieste" name="richieste" required></textarea> */}
+           
             <input type="text" id="richieste" name="richieste" required />
           </div>
           

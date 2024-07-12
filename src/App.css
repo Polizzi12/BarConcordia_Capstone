@@ -657,6 +657,7 @@ to{
   padding: 10px;
   padding-block:20px;
   border-radius: 20px;
+  border: 2px solid #27f7ea;
 }
 
 .form-row{
@@ -672,6 +673,7 @@ to{
   padding-left: 20px;
   font-size: 25px;
   font-weight: bold;
+  padding-top: 3px;
 }
 
 .form-row input {
@@ -689,12 +691,12 @@ to{
 }
 
 .form-row input:focus {
-  background-color: #d3bda0;
-  border-radius: 20px;
-  padding-block: 5px;
-  border-color: #20c1b6 !important;
-  box-shadow: inset 31px 31px 62px #a18f78,
-  inset -31px -31px 62px #d3bda0;
+  background-color: #d3bda0 !important;
+  border-radius: 20px !important;
+  padding-block: 5px !important;
+  border: 2px solid #20c1b6 !important;
+  box-shadow: inset 31px 31px 62px #a18f78 ,
+              inset -31px -31px 62px #d3bda0 !important;
 }
 
 /* #richieste{
@@ -750,16 +752,40 @@ box-shadow: inset 11px 11px 25px #20c1b6,
 
 @media (max-width: 600px) {
   .forma{
-    margin-inline: 15px;
+    margin-inline: 30px !important;
+    
   }
-  .form-row label {
+   .form-row label {
     flex: 1; 
     text-align: left;
-    padding-inline: 10px;
-    font-size: 16px;
-    font-weight: normal;
-  }
+    font-size: 20px;
+    padding-top: 5px;
+  } 
   .bottones{
     width: 150px;;
   }
+}
+
+@media (max-width: 440px) {
+  .forma {
+    margin-inline: 10px !important;
+  }
+
+  .form-row label {
+    font-size: 16px; /* Riduci ulteriormente la dimensione del font */
+    padding-top: 7px;
+  }
+
+  .form-row input {
+    font-size: 14px; /* Riduci ulteriormente la dimensione del font */
+    padding-inline: 5px; /* Riduci ulteriormente il padding */
+  }
+
+  
+}
+input:-webkit-autofill {
+  background-color: #d3bda0 !important; 
+  color: #27f7ea !important; 
+  box-shadow: 0 0 0px 1000px #d3bda0 inset !important; 
+  -webkit-text-fill-color: #27f7ea !important; 
 }
