@@ -43,7 +43,9 @@ function Home() {
           </div>
         </div>
       </div>
+      
       <div className='gio' data-aos="fade-up">
+      <h1 className='titles'>Le nostre fantastiche torte</h1>
       <Carousel>
         <Carousel.Item interval={1000}>
         <img src={Immagineuno} alt="First slide" className="d-block w-100" />
@@ -89,6 +91,7 @@ function Home() {
       </div>
       <div className='gio' data-aos="fade-up" >
       <Carousel>
+      <h1 className='titles'>I Nostri Coni Turchi</h1>
         <Carousel.Item interval={1000}>
           <Image src={Immaginequattro} alt="First slide" flui/>
           <Carousel.Caption>
