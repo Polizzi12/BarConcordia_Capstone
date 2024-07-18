@@ -1,0 +1,258 @@
+allora, ti prego di aiutarmi.
+
+Praticamente ho questo form 
+import React, { useState } from "react";
+
+const Prenota = () => {
+  const [formData, setFormData] = useState({
+    nome: "",
+    cognome: "",
+    email: "",
+    prodotto: "",
+    richieste: "",
+    data_ora: "",
+  });
+  const [file, setFile] = useState(null);
+
+  // Gestisce il contenuto incollato per l'immagine
+  const handlePaste = (event) => {
+    const items = event.clipboardData.items;
+    for (const item of items) {
+      if (item.type.indexOf("image") !== -1) {
+        const blob = item.getAsFile();
+        setFile(blob);
+      }
+    }
+  };
+
+  // Gestisce il cambiamento del file selezionato
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    setFile(file);
+  };
+
+  // Gestisce il cambiamento dei campi di testo del form
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  // Gestisce l'invio del form
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Crea un oggetto FormData per inviare i dati al server
+    const data = new FormData();
+    for (const key in formData) {
+      data.append(key, formData[key]);
+    }
+    if (file) {
+      data.append("image", file);
+    }
+
+    console.log("Dati inviati:", [...data]);
+
+    try {
+      const response = await fetch("/bar_concordia/prenotazione.php", {
+        method: "POST",
+        body: data,
+      });
+
+      console.log("Risposta del server:", response);
+
+      if (response.ok) {
+        const result = await response.text();
+        alert(result);
+        // Resetta lo stato del form dopo la conferma
+        setFormData({
+          nome: "",
+          cognome: "",
+          email: "",
+          prodotto: "",
+          richieste: "",
+          data_ora: "",
+        });
+        setFile(null);
+      } else {
+        const errorText = await response.text();
+        console.error("Errore nella risposta del server:", errorText);
+        throw new Error("Errore durante l'invio della prenotazione.");
+      }
+    } catch (error) {
+      console.error("Errore:", error);
+      alert("Si è verificato un errore durante l'invio della prenotazione.");
+    }
+  };
+
+  return (
+    <div className="ll">
+      <h1 className="title">Prenota</h1>
+      <div className="forma">
+        <form onSubmit={handleSubmit}>
+          <div className="form-row">
+            <label htmlFor="nome">Nome:</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              required
+              placeholder="Inserisci nome"
+              value={formData.nome}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-row">
+            <label htmlFor="cognome">Cognome:</label>
+            <input
+              type="text"
+              id="cognome"
+              name="cognome"
+              required
+              placeholder="Inserisci cognome"
+              value={formData.cognome}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-row">
+            <label htmlFor="email">E-mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Inserisci indirizzo e-mail valido"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-row">
+            <label htmlFor="prodotto">Prodotto:</label>
+            <textarea
+              id="prodotto"
+              name="prodotto"
+              required
+              placeholder="Inserisci qui il prodotto che vuoi prenotare"
+              rows="4"
+              className="large-input"
+              value={formData.prodotto}
+              onChange={handleChange}
+            ></textarea>
+          </div>
+
+          <div className="form-row">
+            <label htmlFor="richieste">Richieste:</label>
+            <textarea
+              id="richieste"
+              name="richieste"
+              required
+              placeholder="Inserisci qui i dettagli del prodotto che si vuole prenotare"
+              rows="4"
+              className="large-input"
+              value={formData.richieste}
+              onChange={handleChange}
+            ></textarea>
+          </div>
+
+          <div className="form-row">
+            <label htmlFor="image">Immagine (puoi incollare o selezionare un file):</label>
+            <input
+              type="file"
+              id="image"
+              className="file-input"
+              name="image"
+              accept="image/*"
+              onChange={handleFileChange}
+              onPaste={handlePaste}
+            />
+            <label htmlFor="image" className="bottonesse">
+              Scegli File
+            </label>
+          </div>
+
+          {file && (
+            <div className="form-row">
+              <label>Anteprima Immagine:</label>
+              <img src={URL.createObjectURL(file)} alt="Anteprima" className="anteprima"/>
+            </div>
+          )}
+
+          <div className="form-row">
+            <label htmlFor="data_ora">Data e Ora Prenotazione:</label>
+            <input
+              type="datetime-local"
+              id="data_ora"
+              name="data_ora"
+              required
+              value={formData.data_ora}
+              onChange={handleChange}
+            />
+          </div>
+
+          <button type="submit" className="bottones">Prenota</button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Prenota;
+
+e questo script php per inviare i dati 
+
+<?php 
+echo "PHP script is running";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    error_log("Request received");
+
+    $nome = filter_var($_POST['nome'], FILTER_SANITIZE_STRING);
+    $cognome = filter_var($_POST['cognome'], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $prodotto = filter_var($_POST['prodotto'], FILTER_SANITIZE_STRING);
+    $richieste = filter_var($_POST['richieste'], FILTER_SANITIZE_STRING);
+    $data_ora = $_POST['data_ora'];
+
+    error_log("Received data: nome=$nome, cognome=$cognome, email=$email, prodotto=$prodotto, richieste=$richieste, data_ora=$data_ora");
+
+    $imagePath = '';
+    if (!empty($_FILES['image']['name'])) {
+        $targetDir = "../uploads/";
+        $imageName = basename($_FILES["image"]["name"]);
+        $imagePath = $targetDir . $imageName;
+        if (!move_uploaded_file($_FILES["image"]["tmp_name"], $imagePath)) {
+            echo "Errore nel caricamento dell'immagine.";
+            exit;
+        }
+    }
+
+    $conn = new mysqli('localhost', 'root', '', 'bar_concordia');
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $stmt = $conn->prepare("INSERT INTO prenotazioni (nome, cognome, email, prodotto, richieste, data_ora, image) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    if ($stmt === false) {
+        die("Errore nella preparazione dello statement: " . $conn->error);
+    }
+
+    $stmt->bind_param("sssssss", $nome, $cognome, $email, $prodotto, $richieste, $data_ora, $imagePath);
+
+    if ($stmt->execute()) {
+        echo "Prenotazione confermata!";
+    } else {
+        echo "Errore nella prenotazione: " . $stmt->error;
+    }
+
+    $stmt->close();
+    $conn->close();
+}
+?>
+
+per una serie di cose, mi sono ritrovato a dover mettere il mio script php dentro la cartella htdocs. e quindi ho dovuto collegare il mio progetto react con questa parte di back-end ma ho provato di tutto e mi da costantemente errori 404 di not found una volta compilato il form.... sapresti risolvere questo problema, magari rifacendo gli script da 0 in modo che io abbia un form funzionante che validi i dati e li mandi al db (creato in phpmyadmin e si chiama bar_concordia)

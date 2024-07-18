@@ -880,3 +880,21 @@ textarea::placeholder {
   font-size: 12.5px;
 }
 }
+
+.anteprima{
+  height: 300px;
+  width: 300px;
+}
+
+@media(max-width:1000px){
+  .anteprima{
+    height: 250px;
+    width: 250px;
+  }
+}
+@media(max-width:600px){
+  .anteprima{
+    height: 170px;
+    width: 170px;
+  }
+}

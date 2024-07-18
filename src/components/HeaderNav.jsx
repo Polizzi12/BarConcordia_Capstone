@@ -31,7 +31,7 @@ const HeaderNav = () => {
   }, [location]);
 
   return (
-    <Navbar className={scrolled ? 'custom-navbar navbar-scrolled' : 'custom-navbar'} expand="lg" fixed="top">
+    <Navbar className={scrolled ? 'custom-navbar navbar-scrolled' : 'custom-navbar'} expand="md" fixed="top">
       <Container>
         <Navbar.Brand href="#">
           <div className='logo-container'>

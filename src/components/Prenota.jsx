@@ -1,52 +1,109 @@
-
 import React, { useState } from "react";
-
+import axios from "axios";
 
 const Prenota = () => {
-  const [image, setImage] = useState(null);
+  const [file, setFile] = useState(null);
+  const [formData, setFormData] = useState({
+    nome: "",
+    cognome: "",
+    email: "",
+    telefono: "", // Nuovo campo per il telefono
+    prodotto: "",
+    richieste: "",
+    data_ora: ""
+  });
 
-  const handlePaste = (event) => {
-    const items = event.clipboardData.items;
-    for (const item of items) {
-      if (item.type.indexOf("image") !== -1) {
-        const blob = item.getAsFile();
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          setImage(event.target.result);
-        };
-        reader.readAsDataURL(blob);
-      }
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0]);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const data = new FormData();
+    data.append("nome", formData.nome);
+    data.append("cognome", formData.cognome);
+    data.append("email", formData.email);
+    data.append("telefono", formData.telefono); // Inserimento del telefono
+    data.append("prodotto", formData.prodotto);
+    data.append("richieste", formData.richieste);
+    data.append("data_ora", formData.data_ora);
+    data.append("image", file);
+
+    console.log("Dati inviati:", Object.fromEntries(data.entries()));
+
+    try {
+      const response = await axios.post("http://localhost/bar_concordia/prenotazione.php", data, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      console.log("Risposta del server:", response.data);
+      alert(response.data);
+    } catch (error) {
+      console.error("Errore durante l'invio della prenotazione", error);
+      alert("Errore durante l'invio della prenotazione. Si prega di riprovare.");
     }
   };
 
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      setImage(event.target.result);
-    };
-    reader.readAsDataURL(file);
-  };
-  
   return (
     <div className="ll">
       <h1 className="title">Prenota</h1>
       <div className="forma">
-        <form action="prenotazione.php" method="post">
+        <form onSubmit={handleSubmit}>
           <div className="form-row">
             <label htmlFor="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required placeholder="Inserisci nome"/>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              required
+              placeholder="Inserisci nome"
+              value={formData.nome}
+              onChange={handleChange}
+            />
           </div>
 
           <div className="form-row">
             <label htmlFor="cognome">Cognome:</label>
-            <input type="text" id="cognome" name="cognome" required placeholder="Inserisci cognome"/>
-            
+            <input
+              type="text"
+              id="cognome"
+              name="cognome"
+              required
+              placeholder="Inserisci cognome"
+              value={formData.cognome}
+              onChange={handleChange}
+            />
           </div>
 
           <div className="form-row">
             <label htmlFor="email">E-mail:</label>
-            <input type="email" id="email" name="email" required placeholder="Inserisci indirizzo e-mail valido"/>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Inserisci indirizzo e-mail valido"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
+
+          <div className="form-row">
+            <label htmlFor="telefono">Telefono:</label>
+            <input
+              type="text"
+              id="telefono"
+              name="telefono"
+              required
+              placeholder="Inserisci numero di telefono"
+              value={formData.telefono}
+              onChange={handleChange}
+            />
           </div>
 
           <div className="form-row">
@@ -55,10 +112,11 @@ const Prenota = () => {
               id="prodotto"
               name="prodotto"
               required
-              placeholder=" Inserisci qui il prodotto che vuoi prenotare 
-              ES: Vassoio di 30 pasticcini, Torta 3kg, vassoio 30pz colazioni"
+              placeholder="Inserisci qui il prodotto che vuoi prenotare"
               rows="4"
               className="large-input"
+              value={formData.prodotto}
+              onChange={handleChange}
             ></textarea>
           </div>
 
@@ -68,13 +126,11 @@ const Prenota = () => {
               id="richieste"
               name="richieste"
               required
-              placeholder="Inserisci qui i dettagli del prodotto che si vuole prenotare 
-              ES: -10 crema 10 ricotta 10 cioccolato.
-              -2kg cioccolato 1kg ricotta.
-              -torta tema Disney.
-              selezionando il tasto blu sotto 'scegli file' potrai incollare l'immagine per la cialda della torta "
+              placeholder="Inserisci qui i dettagli del prodotto che si vuole prenotare"
               rows="4"
               className="large-input"
+              value={formData.richieste}
+              onChange={handleChange}
             ></textarea>
           </div>
 
@@ -87,23 +143,29 @@ const Prenota = () => {
               name="image"
               accept="image/*"
               onChange={handleFileChange}
-              onPaste={handlePaste}
             />
             <label htmlFor="image" className="bottonesse">
               Scegli File
             </label>
           </div>
 
-          {image && (
+          {file && (
             <div className="form-row">
               <label>Anteprima Immagine:</label>
-              <img src={image} alt="Anteprima" style={{ maxWidth: "100%" }} />
+              <img src={URL.createObjectURL(file)} alt="Anteprima" className="anteprima"/>
             </div>
           )}
 
           <div className="form-row">
             <label htmlFor="data_ora">Data e Ora Prenotazione:</label>
-            <input type="datetime-local" id="data_ora" name="data_ora" required />
+            <input
+              type="datetime-local"
+              id="data_ora"
+              name="data_ora"
+              required
+              value={formData.data_ora}
+              onChange={handleChange}
+            />
           </div>
 
           <button type="submit" className="bottones">Prenota</button>
@@ -114,3 +176,8 @@ const Prenota = () => {
 };
 
 export default Prenota;
+
+
+
+
+
