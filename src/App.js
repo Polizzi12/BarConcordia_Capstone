@@ -6,6 +6,7 @@ import Prenota from './components/Prenota';
 import Prodotti from './components/Prodotti';
 import Banner from './components/Banner';
 import  { useState, useEffect } from 'react';
+import ScrollToTopButton from './components/Scroll';
 import Footer from './components/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -32,6 +33,7 @@ function App() {
           <Route path="/prodotti" element={<Prodotti/>} />
           <Route path="/prenota" element={<Prenota />} />
     </Routes> 
+    <ScrollToTopButton />
      <Footer/>  
     </div>
     </Router>
