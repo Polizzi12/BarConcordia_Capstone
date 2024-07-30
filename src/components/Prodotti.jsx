@@ -43,9 +43,11 @@ import Pizzafunghi from "../assets/pizza_funghi.jpg"
 import Pizzamargherita from "../assets/pizza_margherita.jpg";
 import Piadina from "../assets/piadina.jpg";
 import CornettoSalato from "../assets/cornettino_salato.jpg";
-import Flautoosalato from "../assets/flauto_salato.jpg"
-
-
+import Flautoosalato from "../assets/flauto_salato.jpg";
+import conicioccolato from "../assets/conicioccolato.jpg";
+import conipistacchio from "../assets/conipistacchio.jpg";
+import conischizzati from "../assets/conischizzati.jpg";
+import conicolorati from "../assets/conicolorati.jpg";
 
 const Prodotti = () => {
   const [activeTab, setActiveTab] = useState("pasticceria");
@@ -110,6 +112,26 @@ const Prodotti = () => {
                 <li>
                   <div className="bloc">
                     <div className="image-container">
+                      <img src={Pasticcinicrema} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                    Bignè alla Ricotta
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={Pasticcinicrema} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                    Bignè al Cioccolato.
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
                       <img src={Cannoli} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
@@ -126,9 +148,7 @@ const Prodotti = () => {
                       <img src={Cornettonutella} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                     Cornetto alla Nutella
                     </div>
                   </div>
                 </li>
@@ -138,9 +158,7 @@ const Prodotti = () => {
                       <img src={Cornettocrema} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                      Cornetto Alla Crema
                     </div>
                   </div>
                 </li>
@@ -150,9 +168,7 @@ const Prodotti = () => {
                       <img src={Cornettopandistelle} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                      Cornetto PanDistelle
                     </div>
                   </div>
                 </li>
@@ -162,9 +178,12 @@ const Prodotti = () => {
                       <img src={Cornettini} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                      Cornettini, gusti disponibili: <br />
+                      -Pistacchio.<br />
+                      -Cioccolata Bianca.<br />
+                      -Marmellata di Albicocca.<br />
+                      -Nutella.<br />
+                      -Crema.<br />
                     </div>
                   </div>
                 </li>
@@ -174,9 +193,8 @@ const Prodotti = () => {
                       <img src={Cornettocereali} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                     -Cornetto integrale.<br />
+                     -Cornetto 5 cereali.<br />
                     </div>
                   </div>
                 </li>
@@ -186,9 +204,9 @@ const Prodotti = () => {
                       <img src={Cornettointegrale} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                      Cornetti integrali:<br />
+                      -Miele.<br />
+                      -Frutti di Bosco.<br />
                     </div>
                   </div>
                 </li>
@@ -198,9 +216,7 @@ const Prodotti = () => {
                       <img src={Fagottino} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                    Fagottino ai tre cioccolati.
                     </div>
                   </div>
                 </li>
@@ -210,9 +226,9 @@ const Prodotti = () => {
                       <img src={Fagottini} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                      Mezzelune:<br />
+                      -Crema.<br />
+                      -Ricotta.<br />
                     </div>
                   </div>
                 </li>
@@ -222,9 +238,10 @@ const Prodotti = () => {
                       <img src={Flauti} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                    Mini Flauti:<br />
+                      -Nutella.<br />
+                      -RIcotta e scaglie di Cioccolato.<br />
+                      -Crema<br />
                     </div>
                   </div>
                 </li>
@@ -234,9 +251,8 @@ const Prodotti = () => {
                       <img src={GirellaCioccolato} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                      -Girella al Cioccolato.<br />
+                      -Girellina al Cioccolato.<br />
                     </div>
                   </div>
                 </li>
@@ -246,9 +262,7 @@ const Prodotti = () => {
                       <img src={GirellaUva} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                     Girella con Uva Passa.
                     </div>
                   </div>
                 </li>
@@ -258,9 +272,11 @@ const Prodotti = () => {
                       <img src={Palle} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                     Mini panzerotti:<br />
+                     -Ricotta.<br />
+                     -Crema.<br />
+                     -Pistacchio.<br />
+                     -Cioccolato.<br />
                     </div>
                   </div>
                 </li>
@@ -270,9 +286,7 @@ const Prodotti = () => {
                       <img src={Conchiglia} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                     Conchiglia alla Crema al Limone.
                     </div>
                   </div>
                 </li>
@@ -282,9 +296,7 @@ const Prodotti = () => {
                       <img src={MieleNoci} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                      Treccia Miele e Noci
                     </div>
                   </div>
                 </li>
@@ -294,9 +306,8 @@ const Prodotti = () => {
                       <img src={PanGocciole} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                      -Pangocciolo.<br />
+                      -Minipangocciolo.
                     </div>
                   </div>
                 </li>
@@ -306,9 +317,7 @@ const Prodotti = () => {
                       <img src={Donut} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                     Donuts Crema.
                     </div>
                   </div>
                 </li>
@@ -318,9 +327,10 @@ const Prodotti = () => {
                       <img src={MiniDonut} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                    Mini dontus:<br />
+                    -Frutti di bosco.<br />
+                    -Caramello Salato.<br />
+                    -Cioccolato.<br />
                     </div>
                   </div>
                 </li>
@@ -330,9 +340,7 @@ const Prodotti = () => {
                       <img src={BigCookie} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                      Panzerotto al biscotto e ricotta.
                     </div>
                   </div>
                 </li>
@@ -342,9 +350,9 @@ const Prodotti = () => {
                       <img src={Frolle} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                     Crostatine:<br />
+                     -Pistacchio e Ricotta.<br />
+                     -Crema e mele.<br />
                     </div>
                   </div>
                 </li>
@@ -357,9 +365,7 @@ const Prodotti = () => {
                       <img src={SetteGialla} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                      Semifreddo al Caramello.
                     </div>
                   </div>
                 </li>
@@ -369,9 +375,7 @@ const Prodotti = () => {
                       <img src={SetteCiocc} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                     Semifreddo ai tre cioccolati.
                     </div>
                   </div>
                 </li>
@@ -381,9 +385,7 @@ const Prodotti = () => {
                       <img src={SetteFrutt} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                      Semifreddi ai frutti di bosco.
                     </div>
                   </div>
                 </li>
@@ -393,9 +395,7 @@ const Prodotti = () => {
                       <img src={SetteCannolo} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                    Semifreddi al cannolo.
                     </div>
                   </div>
                 </li>
@@ -405,9 +405,7 @@ const Prodotti = () => {
                       <img src={TroncPist} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                      Tronchetto al pistacchio con base croccante alla nocciola.
                     </div>
                   </div>
                 </li>
@@ -417,9 +415,7 @@ const Prodotti = () => {
                       <img src={Viennetta} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                     Viennetta Cioccolato e Vaniglia.
                     </div>
                   </div>
                 </li>
@@ -429,9 +425,12 @@ const Prodotti = () => {
                       <img src={Tartine} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                      Monoporzioni semifreddi:<br />
+                      -Pistacchio.<br />
+                      -Cioccolato.<br />
+                      -Caramello.<br />
+                      -Frutti di Bosco.<br />
+                      -Fiordilatte.<br />
                     </div>
                   </div>
                 </li>
@@ -441,9 +440,7 @@ const Prodotti = () => {
                       <img src={Coppe} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                      Monoporzioni ai frutti di bosco con croccante al limnone.
                     </div>
                   </div>
                 </li>
@@ -453,9 +450,7 @@ const Prodotti = () => {
                       <img src={Palla1} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                     Zuccotto Pistacchio e Nocciola.
                     </div>
                   </div>
                 </li>
@@ -465,9 +460,53 @@ const Prodotti = () => {
                       <img src={Palla2} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Scopri un mondo dolcissimo con gli inimitabili pasticcini del Bar Concordia. Ne troverai per tutti
-                      i gusti: dal cioccolato alla ricotta, fino all'iconica crema pasticcera. E per i più golosi, pure
-                      il pistacchio.
+                      Zuccotto Ricotta e Nutella.
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={conicioccolato} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                      Coni turchi:<br />
+                      -Cioccolato.<br />
+                      -Nocciola.<br />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={conicolorati} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                     Coni turchi alla frutta:<br />
+                     -Limone.<br />
+                     -Fragola.<br />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={conischizzati} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                      Coni turchi: <br />
+                      -Torrone.<br />
+                      -Stracciatella.<br />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={conipistacchio} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                      Coni turchi al pistacchio.
                     </div>
                   </div>
                 </li>
@@ -535,7 +574,7 @@ const Prodotti = () => {
                       <img src={Pizzamargherita} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Salato
+                     Pizza Margherita
                     </div>
                   </div>
                 </li>
@@ -545,7 +584,7 @@ const Prodotti = () => {
                       <img src={Pizzafunghi} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Salato
+                      Pizza ai funghi
                     </div>
                   </div>
                 </li>
@@ -555,7 +594,7 @@ const Prodotti = () => {
                       <img src={Pizzaprosciutto} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Salato
+                      Pizza la prosciutto
                     </div>
                   </div>
                 </li>
@@ -565,7 +604,7 @@ const Prodotti = () => {
                       <img src={Pizzawrustel} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Salato
+                      Pizza con wrustel
                     </div>
                   </div>
                 </li>
@@ -575,7 +614,7 @@ const Prodotti = () => {
                       <img src={Flautoosalato} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Salato
+                     Flauto Salato prosciutto e mozzarella
                     </div>
                   </div>
                 </li>
@@ -585,7 +624,7 @@ const Prodotti = () => {
                       <img src={Piadina} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Salato
+                     Piadina prosciutto e mozzarella
                     </div>
                   </div>
                 </li>
@@ -595,7 +634,7 @@ const Prodotti = () => {
                       <img src={CornettoSalato} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Salato
+                      Cornettino Salato 
                     </div>
                   </div>
                 </li>
