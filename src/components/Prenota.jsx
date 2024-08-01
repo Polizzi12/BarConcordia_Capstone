@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 
 const Prenota = () => {
   const [file, setFile] = useState(null);
@@ -7,11 +9,12 @@ const Prenota = () => {
     nome: "",
     cognome: "",
     email: "",
-    telefono: "", // Nuovo campo per il telefono
+    telefono: "",
     prodotto: "",
     richieste: "",
     data_ora: ""
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -27,13 +30,11 @@ const Prenota = () => {
     data.append("nome", formData.nome);
     data.append("cognome", formData.cognome);
     data.append("email", formData.email);
-    data.append("telefono", formData.telefono); // Inserimento del telefono
+    data.append("telefono", formData.telefono);
     data.append("prodotto", formData.prodotto);
     data.append("richieste", formData.richieste);
     data.append("data_ora", formData.data_ora);
     data.append("image", file);
-
-    console.log("Dati inviati:", Object.fromEntries(data.entries()));
 
     try {
       const response = await axios.post("http://localhost/bar_concordia/prenotazione.php", data, {
@@ -42,7 +43,7 @@ const Prenota = () => {
         },
       });
       console.log("Risposta del server:", response.data);
-      alert(response.data);
+      navigate('/order-summary', { state: formData });
     } catch (error) {
       console.error("Errore durante l'invio della prenotazione", error);
       alert("Errore durante l'invio della prenotazione. Si prega di riprovare.");

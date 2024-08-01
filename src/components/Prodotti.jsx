@@ -48,6 +48,16 @@ import conicioccolato from "../assets/conicioccolato.jpg";
 import conipistacchio from "../assets/conipistacchio.jpg";
 import conischizzati from "../assets/conischizzati.jpg";
 import conicolorati from "../assets/conicolorati.jpg";
+import Pasticciniricotta from "../assets/pasticciniricotta.jpg";
+import Pasticcinicioccolato from "../assets/pasticcinicioccolato.jpg";
+import Calzone from "../assets/calzone.jpg";
+import Focaccia from "../assets/focaccia.jpg";
+import Coperta from "../assets/pizacoperta.jpg";
+import Pizzetta from "../assets/pizzetta.jpg";
+import Cornettopistacchio from "../assets/cornettopistacchio.jpg";
+import Cornettoricotta from "../assets/cornettoricotta.jpg";
+import Granita from "../assets/granitapistacchio&brioches.jpg";
+
 
 const Prodotti = () => {
   const [activeTab, setActiveTab] = useState("pasticceria");
@@ -95,7 +105,7 @@ const Prodotti = () => {
                       <img src={Pasticcinifrutta} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Golosi pasticcini con sopra della frutta fresca
+                      Golosi pasticcini con sopra della frutta fresca.
                     </div>
                   </div>
                 </li>
@@ -105,24 +115,24 @@ const Prodotti = () => {
                       <img src={Pasticcinicrema} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                    Bignè con la nostra indistinguibile crema
+                    Bignè con la nostra indistinguibile crema.
                     </div>
                   </div>
                 </li>
                 <li>
                   <div className="bloc">
                     <div className="image-container">
-                      <img src={Pasticcinicrema} className="immagini" alt="Pasticcini" />
+                      <img src={Pasticciniricotta} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                    Bignè alla Ricotta
+                    Bignè alla Ricotta.
                     </div>
                   </div>
                 </li>
                 <li>
                   <div className="bloc">
                     <div className="image-container">
-                      <img src={Pasticcinicrema} className="immagini" alt="Pasticcini" />
+                      <img src={Pasticcinicioccolato} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
                     Bignè al Cioccolato.
@@ -135,7 +145,7 @@ const Prodotti = () => {
                       <img src={Cannoli} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Il tipico cannolo siciliano formato pasticcino 
+                      Il tipico cannolo siciliano formato pasticcino.
                     </div>
                   </div>
                 </li>
@@ -148,7 +158,7 @@ const Prodotti = () => {
                       <img src={Cornettonutella} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                     Cornetto alla Nutella
+                     Cornetto alla Nutella.
                     </div>
                   </div>
                 </li>
@@ -158,7 +168,27 @@ const Prodotti = () => {
                       <img src={Cornettocrema} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Cornetto Alla Crema
+                      Cornetto Alla Crema.
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={Cornettopistacchio} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                      Cornetto Al Pistacchio.
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={Cornettoricotta} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                      Cornetto Alla Ricotta.
                     </div>
                   </div>
                 </li>
@@ -168,7 +198,7 @@ const Prodotti = () => {
                       <img src={Cornettopandistelle} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Cornetto PanDistelle
+                      Cornetto PanDistelle.
                     </div>
                   </div>
                 </li>
@@ -359,6 +389,16 @@ const Prodotti = () => {
               </ul>
               <h2 className="ttl">Freddi</h2>
               <ul>
+              <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={Granita} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                      Granita e Brioche
+                    </div>
+                  </div>
+                </li>
                 <li>
                   <div className="bloc">
                     <div className="image-container">
@@ -568,6 +608,56 @@ const Prodotti = () => {
             <div className="list">
               <h2 className="ttl">Tavola Calda</h2>
               <ul>
+              <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={CornettoSalato} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                      Cornettino Salato 
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={Calzone} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                      Calzone Wrustel Patatine K. M.
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={Coperta} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                      Pizza Coperta Prosciutto e Mozzarella
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={Focaccia} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                      Focaccia Spinaci, Funghi e Formaggio.
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={Pizzetta} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                      Pizzetta Margherita
+                    </div>
+                  </div>
+                </li>
                 <li>
                   <div className="bloc">
                     <div className="image-container">
@@ -628,16 +718,7 @@ const Prodotti = () => {
                     </div>
                   </div>
                 </li>
-                <li>
-                  <div className="bloc">
-                    <div className="image-container">
-                      <img src={CornettoSalato} className="immagini" alt="Pasticcini" />
-                    </div>
-                    <div className="description">
-                      Cornettino Salato 
-                    </div>
-                  </div>
-                </li>
+                
               </ul>
             </div>
           </div>

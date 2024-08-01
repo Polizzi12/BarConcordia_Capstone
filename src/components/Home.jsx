@@ -11,10 +11,13 @@ import Image from 'react-bootstrap/Image';
 import Immagineuno from '../assets/torta1.jpg';
 import Immaginedue from '../assets/torta2.jpg';
 import Immaginetre from '../assets/tortakinder.jpg';
-import Immaginecinque from '../assets/conischizzati.jpg'
-import Immaginequattro from '../assets/conipistacchio.jpg'
-import Immaginesei from '../assets/conicolorati.jpg'
-import Immaginesette from '../assets/conicioccolato.jpg'
+import Immaginecinque from '../assets/conischizzati.jpg';
+import Immaginequattro from '../assets/conipistacchio.jpg';
+import Immaginesei from '../assets/conicolorati.jpg';
+import Immaginesette from '../assets/conicioccolato.jpg';
+import bancopasticcini from '../assets/pasticcini1.jpg';
+import bancocolazioni from '../assets/banco_colazione.jpg';
+import Granita from "../assets/granitapistacchio&brioches.jpg";
 import { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
@@ -85,58 +88,58 @@ function Home() {
             </div>
           </div>
           <div className="col-md-6">
-            <img src={Esterno} alt="Esterno del bar Concordia" className="section-image-two" />
+            <img src={bancocolazioni} alt="Esterno del bar Concordia" className="section-image-two" />
           </div>
         </div>
       </div>
       <div className='gio' data-aos="fade-up" >
+      <h1 className="titles">I Nostri Coni Turchi</h1>
       <Carousel>
-      <h1 className='titles'>I Nostri Coni Turchi</h1>
-        <Carousel.Item interval={1000}>
-          <Image src={Immaginequattro} alt="First slide" flui/>
-          <Carousel.Caption>
-            <h3>Coni Turchi Al Pistacchio </h3>
-            <p>Il miglior gusto per i nostri speciali coni turchi.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item interval={500}>
-          <Image src={Immaginecinque} alt="Second slide" flui/>
-          <Carousel.Caption>
+      <Carousel.Item interval={1000}>
+        <Image src={Immaginequattro} alt="First slide" fluid />
+        <Carousel.Caption>
+          <h3>Coni Turchi Al Pistacchio</h3>
+          <p>Il miglior gusto per i nostri speciali coni turchi.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={500}>
+        <Image src={Immaginecinque} alt="Second slide" fluid />
+        <Carousel.Caption>
           <h3>Coni Turchi Alle Nocciole</h3>
           <p>Croccanti nocciole per un gusto unico e inconfondibile.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <Image src={Immaginesei} alt="Third slide" fluid/>
-          <Carousel.Caption>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Image src={Immaginesei} alt="Third slide" fluid />
+        <Carousel.Caption>
           <h3>Coni Turchi Alla Frutta</h3>
           <p>Un'esplosione di freschezza con i sapori più fruttati.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <Image src={Immaginesette} alt="Third slide" fluid/>
-          <Carousel.Caption>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Image src={Immaginesette} alt="Fourth slide" fluid />
+        <Carousel.Caption>
           <h3>Coni Turchi Al Cioccolato</h3>
           <p>Una delizia irresistibile per gli amanti del cioccolato.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
      </div>
       {/* Sezione 3 */}
       <div className="container-fluid did" data-aos="fade-right">
         <div className="row mm">
           <div className="col-md-6">
-            <img src={Interno} alt="Interno del bar Concordia" className="section-image-three" />
+            <img src={Granita} alt="Interno del bar Concordia" className="section-image-three" />
           </div>
           <div className="col-md-6 d-flex align-items-center">
             <div className="section-content">
-              <h2 className='section-title'>
-                Per Gli Amanti Del Salato!
-              </h2>
-              <p className='section-text'>
-                Scopri la nostra selezione di prelibatezze salate! Visita la sezione dedicata sul nostro sito e lasciati tentare dalle nostre specialità che completeranno perfettamente la tua esperienza al Bar Concordia. Non perdere l'opportunità di assaporare il meglio della gastronomia locale, sempre con la qualità e il gusto che ci contraddistingue. Ti aspettiamo per farti scoprire un'altra deliziosa parte della nostra offerta, nel cuore di Mazzarrone.
-              </p>
-              <Link to="/Prodotti" className="bottone">SAPORI SALATI</Link>
+            <h2 className='section-title'>
+  Per Gli Amanti Dei Sapori Freddi!
+</h2>
+<p className='section-text'>
+  Scopri la nostra selezione di prelibatezze fredde! Visita la sezione dedicata sul nostro sito e lasciati tentare dalle nostre specialità che completeranno perfettamente la tua esperienza al Bar Concordia. Non perdere l'opportunità di assaporare il meglio della gastronomia locale, sempre con la qualità e il gusto che ci contraddistingue. Ti aspettiamo per farti scoprire un'altra deliziosa parte della nostra offerta, nel cuore di Mazzarrone.
+</p>
+              <Link to="/Prodotti" className="bottone">DOLCI FREDDI</Link>
             </div>
           </div>
         </div>

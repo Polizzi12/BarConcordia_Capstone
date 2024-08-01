@@ -20,8 +20,8 @@ const Footer = () => {
       </div>
       <div className="footer-divider"></div>
       <div className="footer-bottom">
-        <p>Created By Giuseppe Polizzi WebDev: <a href="tel:+393332089141">3332089141</a></p>
-      </div>
+  <p>Created By Giuseppe Polizzi WebDev: <a href="tel:+393332089141">3332089141</a></p>
+</div>
     </footer>
   );
 }

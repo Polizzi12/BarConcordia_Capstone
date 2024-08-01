@@ -1,3 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+body {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, div, span, button {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold !important;
+}
+
+
 .custom-navbar {
   background-color: transparent;
   height: 100px;
@@ -325,6 +339,12 @@
 .footer-bottom {
   display: inline-block;
 }
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
 .footer-bottom p {
   margin: 5px 0;
   color: #27f7ea;
@@ -333,15 +353,13 @@
   display: inline-block;
   width: 0;
   animation: typing 4s steps(40, end) forwards;
+  font-family: 'Amatic SC', cursive, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
 }
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
+
+
+
 
 .footer-bottom p:hover {
   color: #20c1b6 !important;
@@ -973,4 +991,11 @@ textarea::placeholder {
     width: 40px;
     height:40px;
   }
+  .section-image-one,
+  .section-image-two,
+  .section-image-three{
+    border-radius: 0% !important;
+    
+  }
 }
+

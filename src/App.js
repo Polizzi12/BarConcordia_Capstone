@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Prenota from './components/Prenota';
 import Prodotti from './components/Prodotti';
 import Banner from './components/Banner';
+import OrderSummary from './components/OrderSummary';
 import  { useState, useEffect } from 'react';
 import ScrollToTopButton from './components/Scroll';
 import Footer from './components/Footer';
@@ -32,6 +33,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/prodotti" element={<Prodotti/>} />
           <Route path="/prenota" element={<Prenota />} />
+          <Route path="/order-summary" element={<OrderSummary />} />
     </Routes> 
     <ScrollToTopButton />
      <Footer/>  
