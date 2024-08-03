@@ -15,6 +15,7 @@ import Immaginecinque from '../assets/conischizzati.jpg';
 import Immaginequattro from '../assets/conipistacchio.jpg';
 import Immaginesei from '../assets/conicolorati.jpg';
 import Immaginesette from '../assets/conicioccolato.jpg';
+import Immaginesex from '../assets/tortaS.jpg';
 import bancopasticcini from '../assets/pasticcini1.jpg';
 import bancocolazioni from '../assets/banco_colazione.jpg';
 import Granita from "../assets/granitapistacchio&brioches.jpg";
@@ -71,6 +72,13 @@ function Home() {
             <p>Torta piena di pezzi Kinder, per i più golosi.</p>
           </Carousel.Caption>
         </Carousel.Item>
+        <Carousel.Item>
+          <Image src={Immaginesex} alt="Fourth slide" fluid/>
+          <Carousel.Caption>
+            <h3>Torta Cream-Tart</h3>
+            <p>Eleganza e Gusto in ogni morso: Scopri la nostra cream-tart</p>
+          </Carousel.Caption>
+        </Carousel.Item>
       </Carousel>
     </div>
       {/* Sezione 2 con immagini */}
@@ -88,7 +96,7 @@ function Home() {
             </div>
           </div>
           <div className="col-md-6">
-            <img src={bancocolazioni} alt="Esterno del bar Concordia" className="section-image-two" />
+            <img src={bancopasticcini} alt="Esterno del bar Concordia" className="section-image-two" />
           </div>
         </div>
       </div>
@@ -105,8 +113,8 @@ function Home() {
       <Carousel.Item interval={500}>
         <Image src={Immaginecinque} alt="Second slide" fluid />
         <Carousel.Caption>
-          <h3>Coni Turchi Alle Nocciole</h3>
-          <p>Croccanti nocciole per un gusto unico e inconfondibile.</p>
+          <h3>Coni Turchi Al Torrone</h3>
+          <p>Croccanti e freschi per un gusto unico e inconfondibile.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -119,8 +127,8 @@ function Home() {
       <Carousel.Item>
         <Image src={Immaginesette} alt="Fourth slide" fluid />
         <Carousel.Caption>
-          <h3>Coni Turchi Al Cioccolato</h3>
-          <p>Una delizia irresistibile per gli amanti del cioccolato.</p>
+          <h3>Coni Turchi Al Cioccolato e Nocciole</h3>
+          <p>Una delizia irresistibile per gli amanti del cioccolato e delle nocciole.</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

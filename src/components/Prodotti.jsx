@@ -72,7 +72,7 @@ const Prodotti = () => {
         {" "}
         <h1>Scopri tutto ciò che il BarConcordia ha da offrire</h1>{" "}
       </div>
-      <div className="tabs">
+      <div className="tabs" data-aos="fade-up" >
         <button
           className={`tab-button pasticceria-button ${activeTab === "pasticceria" ? "active" : ""}`}
           onClick={() => handleTabClick("pasticceria")}
@@ -83,6 +83,7 @@ const Prodotti = () => {
         <button
           className={`tab-button tavolacalda-button ${activeTab === "tavola-calda" ? "active" : ""}`}
           onClick={() => handleTabClick("tavola-calda")}
+  
         >
           <div className="tt">Tavola Calda</div>
         </button>
@@ -90,13 +91,14 @@ const Prodotti = () => {
         <button
           className={`tab-button caffetteria-button ${activeTab === "caffetteria" ? "active" : ""}`}
           onClick={() => handleTabClick("caffetteria")}
+
         >
           <div className="tt">Caffetteria</div>
         </button>
 
-        <div className="tab-content">
-          <div className={`tab-pane ${activeTab === "pasticceria" ? "active" : ""}`}>
-            <div className="list">
+        <div className="tab-content" >
+          <div className={`tab-pane ${activeTab === "pasticceria" ? "active" : ""}`} >
+            <div className="list" data-aos="fade-up">
               <h2 className="ttl">Pasticcini</h2>
               <ul>
                 <li>
@@ -223,7 +225,7 @@ const Prodotti = () => {
                       <img src={Cornettocereali} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                     -Cornetto integrale.<br />
+                     -Cornetto integrale con marmellata all'arancia.<br />
                      -Cornetto 5 cereali.<br />
                     </div>
                   </div>
@@ -292,7 +294,7 @@ const Prodotti = () => {
                       <img src={GirellaUva} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                     Girella con Uva Passa.
+                     Girellina con Uva Passa.
                     </div>
                   </div>
                 </li>
@@ -395,7 +397,12 @@ const Prodotti = () => {
                       <img src={Granita} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Granita e Brioche
+                      Granita e Brioche: <br />
+                      -limone <br />
+                      -pistacchio  <br />
+                      -cioccolato <br />
+                      -mandorla <br />
+                      -caffè <br />
                     </div>
                   </div>
                 </li>
@@ -435,7 +442,7 @@ const Prodotti = () => {
                       <img src={SetteCannolo} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                    Semifreddi al cannolo.
+                    Semifreddi alla ricotta e Nutella.
                     </div>
                   </div>
                 </li>
@@ -554,7 +561,7 @@ const Prodotti = () => {
             </div>
           </div>
           <div className={`tab-pane ${activeTab === "caffetteria" ? "active" : ""}`}>
-            <div className="list">
+            <div className="list" data-aos="fade-up">
               <h2 className="ttl">Caffetteria</h2>
               <ul>
                 <li>
@@ -605,7 +612,7 @@ const Prodotti = () => {
             </div>
           </div>
           <div className={`tab-pane ${activeTab === "tavola-calda" ? "active" : ""}`}>
-            <div className="list">
+            <div className="list" data-aos="fade-up">
               <h2 className="ttl">Tavola Calda</h2>
               <ul>
               <li>
@@ -614,7 +621,7 @@ const Prodotti = () => {
                       <img src={CornettoSalato} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
-                      Cornettino Salato 
+                      Cornettino Salato con prosciutto e lattuga.
                     </div>
                   </div>
                 </li>
