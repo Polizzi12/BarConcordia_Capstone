@@ -101,7 +101,7 @@ const Prenota = () => {
               id="telefono"
               name="telefono"
               required
-              placeholder="Inserisci numero di telefono"
+              placeholder="Inserisci numero di telefono esistente"
               value={formData.telefono}
               onChange={handleChange}
             />
@@ -113,7 +113,7 @@ const Prenota = () => {
               id="prodotto"
               name="prodotto"
               required
-              placeholder="Inserisci qui il prodotto che vuoi prenotare"
+              placeholder="Inserisci qui il prodotto che vuoi prenotare ES. Torta 3.5kg, Vassio 30 colazioni, ecc.."
               rows="4"
               className="large-input"
               value={formData.prodotto}
@@ -127,7 +127,7 @@ const Prenota = () => {
               id="richieste"
               name="richieste"
               required
-              placeholder="Inserisci qui i dettagli del prodotto che si vuole prenotare"
+              placeholder="Inserisci qui i dettagli del prodotto che si vuole prenotare ES. 1kg crema 2kg ricotta, 'Auguri Aurora', 20 cornetti crema 10 pistacchio. ecc..."
               rows="4"
               className="large-input"
               value={formData.richieste}
@@ -136,7 +136,7 @@ const Prenota = () => {
           </div>
 
           <div className="form-row">
-            <label htmlFor="image">Immagine (puoi incollare o selezionare un file):</label>
+            <label htmlFor="image">Immagine per la cialda (puoi incollare o selezionare un file):</label>
             <input
               type="file"
               id="image"
@@ -146,7 +146,7 @@ const Prenota = () => {
               onChange={handleFileChange}
             />
             <label htmlFor="image" className="bottonesse">
-              Scegli File
+              Scegli Immagine
             </label>
           </div>
 
@@ -158,7 +158,7 @@ const Prenota = () => {
           )}
 
           <div className="form-row">
-            <label htmlFor="data_ora">Data e Ora Prenotazione:</label>
+            <label htmlFor="data_ora">Data e Ora Ritiro Prodotto:</label>
             <input
               type="datetime-local"
               id="data_ora"

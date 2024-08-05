@@ -1116,6 +1116,40 @@ textarea::placeholder {
 
 #rs{
   padding-block:80px;
-  margin-block:200px;
-  
+  margin-block:200px; 
+}
+
+.separ-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.separ {
+  max-width: 100%; 
+  height: auto; 
+}
+
+@media (max-width: 1200px) {
+  .separ {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+  .separ {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .separ {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 576px) {
+  .separ {
+    max-width: 50%;
+  }
 }

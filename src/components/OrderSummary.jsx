@@ -24,11 +24,11 @@ const OrderSummary = () => {
         }
       });
       console.log('Risposta del server:', response.data);
-      if (response.data === "Prenotazione cancellata con successo.") {
+      if (response.data.message === "Prenotazione cancellata con successo.") {
         navigate('/delete');
       } else {
         console.error('Errore dal server:', response.data); // Debug log
-        alert('Errore durante la cancellazione della prenotazione. Si prega di riprovare.');
+        alert(response.data.message || 'Errore durante la cancellazione della prenotazione. Si prega di riprovare.');
       }
     } catch (error) {
       console.error('Errore durante la cancellazione della prenotazione', error);
@@ -86,4 +86,4 @@ const OrderSummary = () => {
   );
 };
 
-export default OrderSummary; 
+export default OrderSummary;

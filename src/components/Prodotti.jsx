@@ -57,7 +57,8 @@ import Pizzetta from "../assets/pizzetta.jpg";
 import Cornettopistacchio from "../assets/cornettopistacchio.jpg";
 import Cornettoricotta from "../assets/cornettoricotta.jpg";
 import Granita from "../assets/granitapistacchio&brioches.jpg";
-
+import Gin from "../assets/ginseng.jpg";
+import Orzo from "../assets/caffe d'orzo.jpg";
 
 const Prodotti = () => {
   const [activeTab, setActiveTab] = useState("pasticceria");
@@ -409,6 +410,54 @@ const Prodotti = () => {
                 <li>
                   <div className="bloc">
                     <div className="image-container">
+                      <img src={conipistacchio} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                      Coni turchi al pistacchio.
+                    </div>
+                  </div>
+                </li>
+              <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={conicioccolato} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                      Coni turchi:<br />
+                      -Cioccolato.<br />
+                      -Nocciola.<br />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={conicolorati} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                     Coni turchi alla frutta:<br />
+                     -Limone.<br />
+                     -Fragola.<br />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={conischizzati} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                      Coni turchi: <br />
+                      -Torrone.<br />
+                      -Stracciatella.<br />
+                    </div>
+                  </div>
+                </li>
+                
+              
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
                       <img src={SetteGialla} className="immagini" alt="Pasticcini" />
                     </div>
                     <div className="description">
@@ -511,52 +560,6 @@ const Prodotti = () => {
                     </div>
                   </div>
                 </li>
-                <li>
-                  <div className="bloc">
-                    <div className="image-container">
-                      <img src={conicioccolato} className="immagini" alt="Pasticcini" />
-                    </div>
-                    <div className="description">
-                      Coni turchi:<br />
-                      -Cioccolato.<br />
-                      -Nocciola.<br />
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="bloc">
-                    <div className="image-container">
-                      <img src={conicolorati} className="immagini" alt="Pasticcini" />
-                    </div>
-                    <div className="description">
-                     Coni turchi alla frutta:<br />
-                     -Limone.<br />
-                     -Fragola.<br />
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="bloc">
-                    <div className="image-container">
-                      <img src={conischizzati} className="immagini" alt="Pasticcini" />
-                    </div>
-                    <div className="description">
-                      Coni turchi: <br />
-                      -Torrone.<br />
-                      -Stracciatella.<br />
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div className="bloc">
-                    <div className="image-container">
-                      <img src={conipistacchio} className="immagini" alt="Pasticcini" />
-                    </div>
-                    <div className="description">
-                      Coni turchi al pistacchio.
-                    </div>
-                  </div>
-                </li>
               </ul>
             </div>
           </div>
@@ -605,6 +608,28 @@ const Prodotti = () => {
                     <div className="description">
                      Caffè macchiato <br />
                      Un tocco di latte per un caffè perfetto.
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={Gin} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                     Ginseng <br />
+                     Il benessere in una tazza: scegli il nostro ginseng di alta qualità
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bloc">
+                    <div className="image-container">
+                      <img src={Orzo} className="immagini" alt="Pasticcini" />
+                    </div>
+                    <div className="description">
+                     Caffè D'Orzo <br />
+                    Scopri il piacere del caffè d'orzo, una scelta senza caffeina.
                     </div>
                   </div>
                 </li>

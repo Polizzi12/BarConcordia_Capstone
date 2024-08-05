@@ -22,6 +22,8 @@ import Granita from "../assets/granitapistacchio&brioches.jpg";
 import { useEffect } from 'react';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
+import Sep from "../assets/separè.png"
+
 
 function Home() {
  
@@ -47,7 +49,9 @@ function Home() {
           </div>
         </div>
       </div>
-      
+      <div className="separ-container">
+         <img src={Sep} alt="separè" className='separ' />
+      </div>
       <div className='gio' data-aos="fade-up">
       <h1 className='titles'>Le nostre fantastiche torte</h1>
       <Carousel>
@@ -81,7 +85,9 @@ function Home() {
         </Carousel.Item>
       </Carousel>
     </div>
-      {/* Sezione 2 con immagini */}
+    <div className="separ-container">
+         <img src={Sep} alt="separè" className='separ' />
+      </div>
       <div className="container-fluid gio" data-aos="fade-left">
         <div className="row mm">
           <div className="col-md-6">
@@ -90,7 +96,7 @@ function Home() {
                 Esplora La Nostra Pasticceria
               </h2>
               <p className='section-text'>
-                Immergiti nel dolce mondo della nostra pasticceria, dove ogni morso ti farà assaporare la genuinità e la passione delle nostre creazioni. Torte spettacolari, pasticcini deliziosi e altre prelibatezze ti aspettano. Vieni a scoprire il piacere di un dolce fatto con amore.
+              Immergiti nel dolce mondo della nostra pasticceria, dove ogni morso ti farà assaporare la genuinità e la passione delle nostre creazioni. Torte spettacolari e pasticcini deliziosi ti aspettano. Vieni a scoprire il piacere di un dolce fatto con amore. Non perdere l'occasione di assaggiare la nostra indistinguibile crema pasticcera, una vera delizia per il palato. Ogni prodotto è creato per offrirti un'esperienza unica e indimenticabile. La nostra pasticceria è il luogo ideale per ritrovare i sapori di una volta e concederti un momento di dolcezza.
               </p>
               <Link to="/Prodotti" className="bottone">PASTICCERIA</Link>
             </div>
@@ -99,6 +105,9 @@ function Home() {
             <img src={bancopasticcini} alt="Esterno del bar Concordia" className="section-image-two" />
           </div>
         </div>
+      </div>
+      <div className="separ-container">
+         <img src={Sep} alt="separè" className='separ' />
       </div>
       <div className='gio' data-aos="fade-up" >
       <h1 className="titles">I Nostri Coni Turchi</h1>
@@ -133,7 +142,9 @@ function Home() {
       </Carousel.Item>
     </Carousel>
      </div>
-      {/* Sezione 3 */}
+     <div className="separ-container">
+         <img src={Sep} alt="separè" className='separ' />
+      </div>
       <div className="container-fluid did" data-aos="fade-right">
         <div className="row mm">
           <div className="col-md-6">
@@ -145,7 +156,7 @@ function Home() {
   Per Gli Amanti Dei Sapori Freddi!
 </h2>
 <p className='section-text'>
-  Scopri la nostra selezione di prelibatezze fredde! Visita la sezione dedicata sul nostro sito e lasciati tentare dalle nostre specialità che completeranno perfettamente la tua esperienza al Bar Concordia. Non perdere l'opportunità di assaporare il meglio della gastronomia locale, sempre con la qualità e il gusto che ci contraddistingue. Ti aspettiamo per farti scoprire un'altra deliziosa parte della nostra offerta, nel cuore di Mazzarrone.
+Scopri la nostra selezione di prelibatezze fredde! Visita la sezione dedicata sul nostro sito e lasciati tentare dalle nostre specialità che completeranno perfettamente la tua esperienza al Bar Concordia. Non perdere l'opportunità di assaporare le nostre deliziose torte semifredde, la fantastica granita e, come non nominare, i nostri irresistibili coni turchi. Ogni morso è un'esplosione di sapori freschi e genuini. La qualità e il gusto che ci contraddistinguono sono sempre presenti in ogni nostra creazione. Ti aspettiamo per farti scoprire un'altra deliziosa parte della nostra offerta, nel cuore di Mazzarrone. Vieni a trovarci e concediti un momento di freschezza indimenticabile!
 </p>
               <Link to="/Prodotti" className="bottone">DOLCI FREDDI</Link>
             </div>
