@@ -495,6 +495,7 @@ h1, h2, h3, h4, h5, h6, p, a, div, span, button {
 
 .padre {
   background-color: #d3bda0;
+  border-top: 6px solid #816a4d;
   color: white;
   width: 100%;
   min-height: 100vh;
@@ -537,6 +538,7 @@ h1, h2, h3, h4, h5, h6, p, a, div, span, button {
   width: 100%;
   padding: 20px;
   background-image: url(./assets/sfondomenu.jpeg);
+  border-top: 8px solid #816a4d;
 }
 
 .tab-content > div {
@@ -569,7 +571,7 @@ h1, h2, h3, h4, h5, h6, p, a, div, span, button {
 
 .titolo {
   text-align: center;
-  color: #816a4d;
+  color: #816a4d ;
   padding-block: 45px;
 }
 @media (max-width: 850px) {
@@ -810,7 +812,8 @@ h1, h2, h3, h4, h5, h6, p, a, div, span, button {
 /* Form Prenotazione */
 
 .ll {
-  background-color: #d3bda0;
+  background-image: url(./assets/sfondomenu.jpeg);
+  border-top: 6px solid #a18f78;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -818,12 +821,17 @@ h1, h2, h3, h4, h5, h6, p, a, div, span, button {
   padding-block: 50px;
 }
 
-.title {
+/* .title {
+  background-color: #d3bda0;
+  border:2px solid #27f7ea;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-bottom:10px;
   font-size: 50px !important;
   padding-bottom: 20px !important;
   color: #27f7ea;
   font-weight: bold;
-}
+}  */
 .titles{
   color:#27f7ea;
   text-align: center;
@@ -926,7 +934,11 @@ h1, h2, h3, h4, h5, h6, p, a, div, span, button {
   border-color: #20c1b6;
   cursor: pointer;
 }
-
+@media (max-width: 1000px) {
+  .forma {
+    margin-inline: 50px !important;
+  }
+}
 @media (max-width: 600px) {
   .forma {
     margin-inline: 30px !important;
@@ -953,6 +965,7 @@ h1, h2, h3, h4, h5, h6, p, a, div, span, button {
   .form-row label {
     font-size: 16px; /* Riduci ulteriormente la dimensione del font */
     padding-top: 7px;
+    
   }
 
   .form-row input {
@@ -1107,7 +1120,8 @@ textarea::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #d3bda0;
+  background-image: url(./assets/sfondomenu.jpeg);
+  border-top: 6px solid #a18f78;
   margin: 0;
   width: 100%;
   height: 100%;
@@ -1130,26 +1144,41 @@ textarea::placeholder {
   height: auto; 
 }
 
+#pd{
+  margin-bottom:50px;
+  padding-inline: 260px;
+}
+
 @media (max-width: 1200px) {
   .separ {
     max-width: 80%;
   }
+  
 }
 
 @media (max-width: 992px) {
   .separ {
     max-width: 70%;
   }
+  
 }
 
 @media (max-width: 768px) {
   .separ {
     max-width: 60%;
   }
+  #pd{
+    margin-bottom: 30px;
+  }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 680px) {
   .separ {
     max-width: 50%;
   }
+  #pd{
+    padding-inline: 110px; 
+   
+  }
 }
+

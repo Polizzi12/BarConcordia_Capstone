@@ -70,9 +70,10 @@ const OrderSummary = () => {
             <span>Richieste</span>
             <span>{richieste}</span>
           </li>
-          <li className="johnListItem">
-            <span>Data e Ora</span>
+          <li className="sitaa">
+            <span>DA RITIRARE IL GIORNO:       </span>
             <span>{data_ora}</span>
+      
           </li>
         </ul>
       </div>

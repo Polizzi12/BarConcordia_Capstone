@@ -51,8 +51,8 @@ const Prenota = () => {
   };
 
   return (
-    <div className="ll">
-      <h1 className="title" data-aos="fade-up">Prenota</h1>
+    <div className="ll" >
+      <h1 className="ttl" id="pd" data-aos="fade-up">Prenota</h1>
       <div className="forma" data-aos="fade-up">
         <form onSubmit={handleSubmit}>
           <div className="form-row">

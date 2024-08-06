@@ -8,6 +8,7 @@
     font-family: "Inter", sans-serif;
     color: #27f7ea; 
     padding: 20px;
+    background-image: url(../assets/sfondomenu.jpeg);
 }
 
 /* color:#20c1b6
@@ -151,17 +152,34 @@ p {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
-    border-bottom: 1px solid #a18f78;
+    /* border-radius: 20px; */
+    border-bottom: 2px solid #27f7ea;
 }
 
+
 .johnListItem span {
-    font-size: 14px;
+    font-size: 20px;
     color: #27f7ea;
 }
 
 .johnListItem span:first-of-type {
     color: #27f7ea;
 }
+
+.sitaa{
+   
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    color:#27f7ea;
+    background-color: #d3bda0;
+    border-radius: 10px;
+    border: 6px solid #27f7ea;
+    padding-inline: 20px;
+    margin-top:35px;
+  }
 
 @keyframes translate-y-100 {
     0% {
@@ -234,3 +252,29 @@ p {
     border-color: red;
     cursor: pointer;
   }
+
+  @media (max-width: 1200px) {
+    .sitaa{
+        font-size: 35px !important;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .sitaa{
+        font-size: 30px !important;
+    }
+    
+  }
+  
+  @media (max-width: 768px) {
+    .sitaa{
+        font-size: 25px !important;
+    }
+  }
+  
+  @media (max-width: 680px) {
+    .sitaa{
+        font-size: 20px !important;
+    }
+  }
+  
